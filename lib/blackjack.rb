@@ -3,8 +3,7 @@ def welcome
 end
 
 def deal_card
-  puts 1 + rand(11)
-  1 + rand(11)
+  rand(1..11)
 end
 
 def display_card_total(card_total)
@@ -13,11 +12,9 @@ end
 
 def prompt_user
   puts "Type 'h' to hit or 's' to stay"
-  "Type 'h' to hit or 's' to stay"
 end
 
 def get_user_input
-  puts
   answer = gets.chomp
 end
 
@@ -27,6 +24,9 @@ end
 
 def initial_round
 first_round = deal_card + deal_card
+
+display_card_total(first_round)
+  return first_round
 end
 
 def hit?(card_total)
